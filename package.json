@@ -1,0 +1,24 @@
+{
+  "name": "server-fastify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/she1nXgod/server-fastify.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/she1nXgod/server-fastify/issues"
+  },
+  "homepage": "https://github.com/she1nXgod/server-fastify#readme",
+  "dependencies": {
+    "fastify": "^5.8.2"
+  }
+}
