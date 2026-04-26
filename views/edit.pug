@@ -1,0 +1,19 @@
+extends layout.pug
+
+block content
+  h1 Редактировать пользователя
+
+  form(action=`/users/${user.id}/edit`, method="POST")
+    div
+      label Имя:
+      input(type="text", name="name", value=user.name, required)
+    br
+    div
+      label Email:
+      input(type="email", name="email", value=user.email, required)
+    br
+    div
+      button(type="submit") Сохранить
+      | 
+      a(href="/users")
+        button(type="button") Отмена

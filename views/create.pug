@@ -2,13 +2,18 @@ extends layout.pug
 
 block content
   h1 Создать пользователя
-  
+
   form(action="/users", method="POST")
     div
       label Имя:
       input(type="text", name="name", required)
+    br
     div
       label Email:
       input(type="email", name="email", required)
+    br
     div
       button(type="submit") Создать
+      | 
+      a(href="/users")
+        button(type="button") Отмена

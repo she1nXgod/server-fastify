@@ -2,10 +2,29 @@ extends layout.pug
 
 block content
   h1 Пользователи
-  
+
   if users.length
-    ul
-      each user in users
-        li #{user.id}. #{user.name} — #{user.email}
+    table(border="1", cellpadding="8")
+      thead
+        tr
+          th ID
+          th Имя
+          th Email
+          th Действия
+      tbody
+        each user in users
+          tr
+            td= user.id
+            td= user.name
+            td= user.email
+            td
+              a(href=`/users/${user.id}/edit`)
+                button Редактировать
+              form(action=`/users/${user.id}/delete`, method="POST", class="inline-form")
+                button(type="submit") Удалить
   else
     p Пользователей нет
+
+  p
+    a(href="/users/create")
+      button Создать пользователя
